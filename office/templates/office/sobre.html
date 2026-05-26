@@ -1,5 +1,5 @@
 {%  extends "office/index.html"%}
-
+{% load static %}
 
 {% block title%} Sobre {% endblock%}
             
@@ -22,7 +22,7 @@
                                             <p>Idade: {{x.idade}}</p>
                                             <p>Curiosidade: {{x.curiosidade}}</p>
                                         </div>
-                                        <img class="img-fluid" src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
+                                        <img class="img-fluid" src="{% static x.foto %}" alt="..." />
                                     </div>
                                 </div>
                             </div>
