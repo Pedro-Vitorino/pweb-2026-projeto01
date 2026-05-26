@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.templatetags.static import static
 
 def index(request):
 
@@ -15,7 +16,7 @@ def index(request):
 def elenco(request):
 
     atores = [
-        {"Foto": "...", "nome": "John Krasinski", "idade": 32, "categoria": "Ação/Comédia", "nasc": "Boston, MA", "Resumo": "John Krasinski é ator, diretor e roteirista. Ficou conhecido mundialmente por interpretar Jim Halpert em The Office. Além da comédia, também ganhou destaque no cinema ao dirigir e atuar em A Quiet Place, e protagonizou a série Tom Clancy's Jack Ryan."},
+        {"Foto": static("img/elenco/michael.jpg"), "nome": "John Krasinski", "idade": 32, "categoria": "Ação/Comédia", "nasc": "Boston, MA", "Resumo": "John Krasinski é ator, diretor e roteirista. Ficou conhecido mundialmente por interpretar Jim Halpert em The Office. Além da comédia, também ganhou destaque no cinema ao dirigir e atuar em A Quiet Place, e protagonizou a série Tom Clancy's Jack Ryan."},
         {"Foto": "...", "nome": "Steve Carrell", "idade": 65, "categoria": "Comédia", "nasc": "Concord, MA", "Resumo": "Steve Carell é ator, comediante e produtor. Tornou-se um dos nomes mais conhecidos da comédia ao interpretar Michael Scott em The Office. No cinema participou de filmes como The 40-Year-Old Virgin, Little Miss Sunshine e também deu voz ao Gru em Despicable Me."},
         {"Foto": "...", "nome": "Rainn Wilson", "idade": 40, "categoria": "Comédia", "nasc": "Seattle, WS", "Resumo": "Rainn Wilson ficou conhecido por interpretar Dwight Schrute em The Office, papel que marcou sua carreira. Além da atuação, também trabalhou como produtor e escritor e participou de diferentes séries e filmes de comédia ao longo dos anos."},
         {"Foto": "...", "nome": "Jenna Fischer", "idade": 42, "categoria": "Romance/Comédia", "nasc": "Fort Wayne, IN", "Resumo": "Jenna Fischer ganhou reconhecimento ao interpretar Pam Beesly em The Office. Depois da série, participou de produções de televisão e cinema, especialmente no gênero de comédia, e também publicou livros contando parte de sua trajetória profissional."},
