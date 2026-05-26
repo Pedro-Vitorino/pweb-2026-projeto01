@@ -13,7 +13,30 @@ def index(request):
     return render(request, 'office/index.html', context)
 
 def elenco(request):
-    return render(request, 'office/elenco.html')
+
+    atores = [
+        {"Foto": "...", "nome": "John Krasinski", "idade": 32, "categoria": "Ação/Comédia", "nasc": "Boston, MA", "Resumo": "John Krasinski é ator, diretor e roteirista. Ficou conhecido mundialmente por interpretar Jim Halpert em The Office. Além da comédia, também ganhou destaque no cinema ao dirigir e atuar em A Quiet Place, e protagonizou a série Tom Clancy's Jack Ryan."},
+        {"Foto": "...", "nome": "Steve Carrell", "idade": 65, "categoria": "Comédia", "nasc": "Concord, MA", "Resumo": "Steve Carell é ator, comediante e produtor. Tornou-se um dos nomes mais conhecidos da comédia ao interpretar Michael Scott em The Office. No cinema participou de filmes como The 40-Year-Old Virgin, Little Miss Sunshine e também deu voz ao Gru em Despicable Me."},
+        {"Foto": "...", "nome": "Rainn Wilson", "idade": 40, "categoria": "Comédia", "nasc": "Seattle, WS", "Resumo": "Rainn Wilson ficou conhecido por interpretar Dwight Schrute em The Office, papel que marcou sua carreira. Além da atuação, também trabalhou como produtor e escritor e participou de diferentes séries e filmes de comédia ao longo dos anos."},
+        {"Foto": "...", "nome": "Jenna Fischer", "idade": 42, "categoria": "Romance/Comédia", "nasc": "Fort Wayne, IN", "Resumo": "Jenna Fischer ganhou reconhecimento ao interpretar Pam Beesly em The Office. Depois da série, participou de produções de televisão e cinema, especialmente no gênero de comédia, e também publicou livros contando parte de sua trajetória profissional."},
+        {"Foto": "...", "nome": "Angela Kinsey", "idade": 42, "categoria": "Romance/Comédia", "nasc": "Laffayete, LO", "Resumo": "Angela Kinsey ficou famosa por interpretar Angela Martin em The Office. Após o sucesso da série, continuou atuando em comédias e projetos para televisão, além de participar de podcasts e conteúdos sobre bastidores do entretenimento."},
+        {"Foto": "...", "nome": "BJ Novak", "idade": 50, "categoria": "Romance/Comédia", "nasc": "Newton, MA", "Resumo": "B. J. Novak atuou como Ryan Howard em The Office e também foi um dos roteiristas e produtores da série. No cinema participou de filmes como Inglourious Basterds e também desenvolveu projetos próprios como diretor e escritor."},
+    ]
+
+    criadores = [
+        {"Foto": "...", "nome": "Greg Daniels", "idade": 62, "categoria": "Showrunner", "nasc": "Brooklyn, NY"},
+        {"Foto": "...", "nome": "Mindy Kaling", "idade": 42, "categoria": "Roteirista", "nasc": "Cambridge, MA"},
+         {"Foto": "...", "nome": "BJ Novak", "idade": 50, "categoria": "Ator/Roteirista", "nasc": "Newton, MA"},
+        {"Foto": "...", "nome": "Michael Schur", "idade": 35, "categoria": "Ator/Roteiro", "nasc": "Ann Arbor, MC"},
+        {"Foto": "...", "nome": "Paul Libersteen", "idade": 700, "categoria": "ODIADO", "nasc": "Area 51"},
+    ]
+
+    context = {
+        "atores": atores,
+
+        "criadores": criadores,
+    }
+    return render(request, 'office/elenco.html', context)
 
 def sobre(request):
     sobre_list = [
