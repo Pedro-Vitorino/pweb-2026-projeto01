@@ -24,11 +24,11 @@ def elenco(request):
     ]
 
     criadores = [
-        {"Foto": "...", "nome": "Greg Daniels", "idade": 62, "categoria": "Showrunner", "nasc": "Brooklyn, NY"},
-        {"Foto": "...", "nome": "Mindy Kaling", "idade": 42, "categoria": "Roteirista", "nasc": "Cambridge, MA"},
-         {"Foto": "...", "nome": "BJ Novak", "idade": 50, "categoria": "Ator/Roteirista", "nasc": "Newton, MA"},
-        {"Foto": "...", "nome": "Michael Schur", "idade": 35, "categoria": "Ator/Roteiro", "nasc": "Ann Arbor, MC"},
-        {"Foto": "...", "nome": "Paul Libersteen", "idade": 700, "categoria": "ODIADO", "nasc": "Area 51"},
+        {"Foto": "...", "nome": "Greg Daniels", "idade": 62, "categoria": "Showrunner", "nasc": "Brooklyn, NY", "resumo" : "Greg Daniels é roteirista, produtor e showrunner. Ficou conhecido por adaptar a versão americana de The Office e também trabalhou em séries de sucesso como Parks and Recreation, The Simpsons e King of the Hill."},
+        {"Foto": "...", "nome": "Mindy Kaling", "idade": 42, "categoria": "Roteirista", "nasc": "Cambridge, MA", "resumo" : "Mindy Kaling é atriz, roteirista e produtora. Ganhou destaque em The Office, onde interpretou Kelly Kapoor e trabalhou como roteirista. Depois criou e estrelou séries como The Mindy Project e participou de produções de comédia e cinema."},
+         {"Foto": "...", "nome": "BJ Novak", "idade": 50, "categoria": "Ator/Roteirista", "nasc": "Newton, MA", "resumo" : "B. J. Novak atuou como Ryan Howard em The Office e também foi um dos roteiristas e produtores da série. Além da televisão, participou de filmes como Inglourious Basterds e trabalhou em projetos como escritor e diretor."},
+        {"Foto": "...", "nome": "Michael Schur", "idade": 35, "categoria": "Ator/Roteiro", "nasc": "Ann Arbor, MC", "resumo" : "Michael Schur é roteirista, produtor e ator. Em The Office, trabalhou como produtor e também interpretou Mose Schrute. Criou séries de sucesso como Brooklyn Nine-Nine, The Good Place e Parks and Recreation."},
+        {"Foto": "...", "nome": "Paul Libersteen", "idade": 700, "categoria": "NUNCA FEZ NADA QUE PRESTE", "nasc": "Area 51", "resumo" : "toby."},
     ]
 
     context = {
