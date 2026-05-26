@@ -1,7 +1,16 @@
 from django.shortcuts import render
 
 def index(request):
-    return render(request, 'office/index.html')
+
+    sinopse = [
+        {"data": "25 de Março de 2005", "sinopse": "The Office é uma série em formato de mockumentary (falso documentário) que retrata o cotidiano caótico e hilário dos funcionários de uma filial da empresa de papel Dunder Mifflin, em Scranton, Pensilvânia. O gerente regional, Michael Scott, é um chefe sem noção e egocêntrico que tenta liderar sua equipe lidando com diversas crises burocráticas."},
+
+    ]
+
+    context= {
+        "sinopse":sinopse,
+    }
+    return render(request, 'office/index.html', context)
 
 def elenco(request):
     return render(request, 'office/elenco.html')

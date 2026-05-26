@@ -188,8 +188,10 @@
                         <div class="col-xxl-8">
                             <div class="text-center my-5">
                                 <h2 class="display-5 fw-bolder"><span class="text-warning d-inline">Sinopse da série</span></h2>
-                                <p class="lead fw-light mb-4">The Office foi lançada em: .</p>
-                                <p class="text-muted"></p>
+                                {% for x in sinopse%}
+                                <p class="lead fw-light mb-4">The Office foi lançada em: {{x.data}}</p>
+                                <p class="text-muted">{{x.sinopse}}</p>
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
