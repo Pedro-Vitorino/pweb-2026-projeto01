@@ -14,7 +14,7 @@
                         <!-- Atores-->
                         <section>
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h2 class="text-primary fw-bolder mb-0">Atores Principais</h2>
+                                <h2 class="text-warning fw-bolder mb-0">Atores Principais</h2>
                                 <!-- Download resume button-->
                                 <!-- Note: Set the link href target to a PDF file within your project-->
                             </div>
@@ -24,10 +24,10 @@
                                 <div class="card-body p-5">
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
-                                            <div class="bg-light p-2 rounded-4">
-                                                <img class="img-fluid rounded-4" src="{% static x.Foto %}" alt="{{ x.nome }}">
+                                            <div class="bg-cinza p-1 rounded-4">
+                                                <img class="img-fluid padrao rounded-4" src="{% static x.Foto %}" alt="{{ x.nome }}">
                                             </div>
-                                            <div class="text-primary fw-bolder mb-2">Nome: {{x.nome}}</div>
+                                            <div class="text-warning fw-bolder mb-2">Nome: {{x.nome}}</div>
                                         </div>
                                         <div class="col-lg-8">
                                             <div class="small fw-bolder">Especialidades: {{x.categoria}}</div>
