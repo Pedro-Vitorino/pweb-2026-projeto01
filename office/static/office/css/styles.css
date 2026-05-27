@@ -11761,3 +11761,9 @@ html {
 .text-criadores{
   color: brown;
 }
+
+.img-criadores{
+  height: 200px;
+  width: 140px;
+  border-radius: 70px;
+}

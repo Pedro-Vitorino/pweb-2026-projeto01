@@ -41,7 +41,7 @@ def elenco(request):
 
 def sobre(request):
     sobre_list = [
-        {"criador" : "Pedro Emanuel Vitorino Dias Monteiro", "idade" : 17, "curiosidade" : "Fala inglês fluentemente",  "foto": "office/img/pedro.png" },
+        {"criador" : "Pedro E. Vitorino D. Monteiro", "idade" : 17, "curiosidade" : "Fala inglês fluentemente",  "foto": "office/img/pedro.png" },
         {"criador" : "Nicolly Silva Gomes de Lima", "idade" : 16, "curiosidade" : "Tem um cachorrinho chamado Lucca", "foto": "office/img/nicolly.png"},
     ]
 
