@@ -79,7 +79,7 @@
                                 <div class="profile bg-gra dient-primary-to-secondary">
                                     <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
                                     <!-- Watch a tutorial on how to do this on YouTube (link)-->
-                                    <img class="profile-img" src="{% static 'office/assets/profile.png' %}" alt="..." />
+                                    <img class="profile-img" src="{% static 'office/assets/profile.png' %}" id="minhaImagem"  style="cursor:pointer;" alt="..." />
                                     </div>
                                 </div>
                             </div>
@@ -130,7 +130,34 @@
                     });
                 }
             });
-</script>
-</script>
+        </script>
+
+        <audio id="meuAudio"></audio>
+
+        <script>
+            const imagem = document.getElementById("minhaImagem");
+            const audio = document.getElementById("meuAudio");
+
+            const audios = [
+                "{% static 'office/mp3/no.mp3' %}",
+                "{% static 'office/mp3/Thats.mp3' %}",
+                "{% static 'office/mp3/turtles.mp3' %}"
+            ];
+
+            let clique = 0;
+
+            imagem.addEventListener("click", function () {
+                audio.src = audios[clique];
+                audio.currentTime = 0;
+                audio.play();
+
+                clique++;
+
+                if (clique >= audios.length) {
+                    clique = 0;
+                }
+            });
+        </script>
+
     </body>
 </html>
