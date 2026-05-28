@@ -28,7 +28,7 @@
                                     <div class="row align-items-center gx-5">
                                         <div class="col text-center text-lg-start mb-4 mb-lg-0">
                                             <div class="bg-cinza p-1 rounded-4">
-                                                <img class="img-fluid padrao rounded-4" src="{% static x.Foto %}" alt="{{ x.nome }}">
+                                                <img class="img-fluid padrao rounded-4 imagem-com-som" src="{% static x.Foto %}" alt="{{ x.nome }}"  data-audio="{% static x.audio %}"   style="cursor:pointer;">
                                             </div>
                                             <div class="text-warning fw-bolder mb-2">Nome: {{x.nome}}</div>
                                         </div>
@@ -79,4 +79,32 @@
                 </div>
             </div>
         </main>
+       
+<script>
+let audioAtual = null;
+
+document.querySelectorAll(".imagem-com-som").forEach(img => {
+
+    img.addEventListener("click", function () {
+
+        // para todos os <audio> da página
+        document.querySelectorAll("audio").forEach(audio => {
+            audio.pause();
+            audio.currentTime = 0;
+        });
+
+        // para áudio criado antes via JS
+        if (audioAtual) {
+            audioAtual.pause();
+            audioAtual.currentTime = 0;
+        }
+
+        // toca o novo
+        audioAtual = new Audio(this.dataset.audio);
+        audioAtual.play();
+
+    });
+
+});
+</script>
 {%endblock%}
